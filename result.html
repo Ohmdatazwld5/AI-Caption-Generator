@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Image Caption Generator - Results</title>
+  </head>
+  <body>
+    <h1>Image Caption Generator - Results</h1>
+    {% for caption_set in captions_set %}
+      <h2>Captions for Image {{ loop.index }}</h2>
+      <ul>
+        {% for caption in caption_set %}
+          <li>{{ caption }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </body>
+</html>
